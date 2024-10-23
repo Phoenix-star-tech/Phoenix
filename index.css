@@ -4,15 +4,19 @@
 }
 .navbar-inverse .navbar-nav>li>a:hover {
   background-color: #FFFFFF; 
-  color: #000000; 
+  color: #FFA500; 
 }
 .dropdown-menu a {
   background-color: #FFFFFF;
-  color: #000000;
+  color: #FFFFFF;
 }
 .navbar-inverse .navbar-nav>li>a,
 .navbar-inverse .navbar-brand {
   color: #FFFFFF; 
+}
+.navbar-toggle:hover{
+  border-color: #FFA500;
+  color: #FFA500;
 }
 
 .navbar-inverse .navbar-nav>.active>a, 
