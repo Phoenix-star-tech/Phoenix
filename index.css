@@ -633,3 +633,8 @@ footer {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.login{
+  height: 300px;
+  width: 400px;
+}
