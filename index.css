@@ -638,5 +638,6 @@ footer {
   height: 300px;
   width: 400px;
   background-color: gray;
+  position: relative;
   top: 500px;
 }
