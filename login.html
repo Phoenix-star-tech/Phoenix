@@ -38,93 +38,19 @@
               </div>
             </div>
           </nav>
-          <section class="background-radial-gradient overflow-hidden"></section>
-          <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-            <div class="row gx-lg-5 align-items-center mb-5">
-              <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-                  The best offer <br />
-                  <span style="color: hsl(218, 81%, 75%)">for your business</span>
-                </h1>
-                <p class="mb-4 opacity-70" style="color: black">
-                    At Phoenix Software Solution, we rise to the challenge of creating cutting-edge software solutions tailored to your business needs. With a focus on innovation, efficiency, and customer satisfaction, we transform ideas into scalable digital experiences. Whether you're seeking custom software development, app design, or technical consulting, Phoenix Software Solution is your trusted partner in navigating the ever-evolving tech landscape.
-                </p>
-              </div>
-        
-              <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-        
-                <div class="card bg-glass">
-                  <div class="card-body px-4 py-5 px-md-5">
-                    <form>
-                      <!-- 2 column grid layout with text inputs for the first and last names -->
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form3Example1" class="form-control" />
-                            <label class="form-label" for="form3Example1">First name</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                          <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form3Example2" class="form-control" />
-                            <label class="form-label" for="form3Example2">Last name</label>
-                          </div>
-                        </div>
-                      </div>
-        
-                      <!-- Email input -->
-                      <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="email" id="form3Example3" class="form-control" />
-                        <label class="form-label" for="form3Example3">Email address</label>
-                      </div>
-        
-                      <!-- Password input -->
-                      <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="password" id="form3Example4" class="form-control" />
-                        <label class="form-label" for="form3Example4">Password</label>
-                      </div>
-        
-                      <!-- Checkbox -->
-                      <div class="form-check d-flex justify-content-center mb-4">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                        <label class="form-check-label" for="form2Example33">
-                          Subscribe to our newsletter
-                        </label>
-                      </div>
-        
-                      <!-- Submit button -->
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-                        Sign up
-                      </button>
-        
-                      <!-- Register buttons -->
-                      <div class="text-center">
-                        <p>or sign up with:</p>
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-facebook-f"></i>
-                        </button>
-        
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-google"></i>
-                        </button>
-        
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-twitter"></i>
-                        </button>
-        
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                          <i class="fab fa-github"></i>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-          </div>
-        </section>
-
-    </body>
-</html>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
