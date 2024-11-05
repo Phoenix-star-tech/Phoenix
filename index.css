@@ -638,7 +638,7 @@ footer {
   height: 300px;
   width: 400px;
   background-color: gray;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   translate: -50%, -50%;
