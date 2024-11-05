@@ -637,6 +637,6 @@ footer {
 .login{
   height: 300px;
   width: 400px;
-  position: relative;
+  background-color: gray;
   top: 500px;
 }
