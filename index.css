@@ -89,8 +89,8 @@
 .webdev {
   text-align: center;
   background-color: #E5E5E5;
-  width: 100%;
-  max-width: 270px;
+  width: 100%; /* Make it full width on small screens */
+  max-width: 270px; /* Ensure there's a maximum width */
   border-radius: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -109,9 +109,23 @@
   color: white;
   padding: 10px;
   border-radius: 10px;
-  text-decoration: none;
+  text-decoration: none; /* Ensure no underline */
 }
 
+/* Media Query for larger screens */
+@media (min-width: 768px) {
+  .intro2 {
+    flex-direction: row;
+    justify-content: center; /* Centers the boxes horizontally */
+  }
+
+  .webdev {
+    flex: 1; /* Make all boxes take up equal space */
+    max-width: 300px; /* Adjust width for larger screens */
+    margin: 10px; /* Add spacing between boxes */
+  }
+}
+/* From Uiverse.io by abrahamcalsin */ 
 .card-client {
   background: #2cb5a0;
   width: 25rem;
@@ -189,6 +203,7 @@
   fill: currentColor;
 }
 
+/*-- Tooltip Social Media --*/
 .tooltip-social {
   background: #262626;
   display: block;
@@ -226,6 +241,7 @@
   transform: translate(-50%, -130%);
 }
 
+/* General Footer Styling */
 footer {
   background-color: #2c2c2c;
   color: #fff;
@@ -274,6 +290,7 @@ footer {
   color: #FFA500;
 }
 
+/* Social Media Icons */
 .social-icons a {
   color: #fff;
   font-size: 20px;
@@ -285,6 +302,7 @@ footer {
   color: #FFA500;
 }
 
+/* Footer Bottom Text */
 .footer-bottom-text {
   text-align: center;
   padding: 20px 0;
@@ -296,6 +314,22 @@ footer {
   color: #aaa;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-company,
+  .footer-links,
+  .footer-social {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/* General Form Styling */
 .feedbackform {
   max-width: 600px;
   margin: 50px auto;
@@ -306,6 +340,7 @@ footer {
   font-family: 'Arial', sans-serif;
 }
 
+/* Input Fields and Textarea */
 .feedbackform input[type="email"],
 .feedbackform textarea {
   width: 100%;
@@ -318,17 +353,20 @@ footer {
   transition: border-color 0.3s ease;
 }
 
+/* Placeholder Styling */
 .feedbackform input::placeholder,
 .feedbackform textarea::placeholder {
   color: #aaa;
 }
 
+/* Focus States */
 .feedbackform input[type="email"]:focus,
 .feedbackform textarea:focus {
   border-color: #ffa500;
   outline: none;
 }
 
+/* Submit Button */
 .feedbackform button[type="submit"] {
   width: 100%;
   padding: 15px;
@@ -344,477 +382,167 @@ footer {
 .feedbackform button[type="submit"]:hover {
   background-color: #ff8c00;
 }
-
+/* Result Message */
 #result {
   margin-top: 20px;
   font-size: 14px;
   color: #333;
 }
 
-.contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px 0;
-}
-
-.contact-info {
-  max-width: 45%;
-}
-
-.contact-form {
-  max-width: 45%;
-}
-
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .footer-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-company,
-  .footer-links,
-  .footer-social {
-    text-align: center;
-    margin-bottom: 30px;
-  }
   .feedbackform {
     padding: 15px;
   }
+
   .feedbackform input[type="email"],
   .feedbackform textarea {
     padding: 12px;
   }
+
   .feedbackform button[type="submit"] {
     padding: 12px;
     font-size: 14px;
   }
-  .services-container {
-    flex-direction: column;
-    align-items: center;
-  }
+}/* Contact Section Styling */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f4f4f4;
 }
-.navbar-inverse {
+
+.contact-info {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+}
+
+.contact-info h2 {
+  font-size: 2em;
+  color: #FFA500;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-form-container {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form .btn-submit {
   background-color: #FFA500;
-  border-color: #FFA500; 
-}
-.navbar-inverse .navbar-nav>li>a:hover {
-  background-color: #FFFFFF; 
-  color: #FFA500; 
-}
-.dropdown-menu a {
-  background-color: #FFFFFF;
-  color: #FFFFFF;
-}
-.navbar-inverse .navbar-nav>li>a,
-.navbar-inverse .navbar-brand {
-  color: #FFFFFF; 
-}
-.navbar-toggle:hover{
-  border-color: #FFA500;
-  color: #FFA500;
-}
-
-.navbar-inverse .navbar-nav>.active>a, 
-.navbar-inverse .navbar-nav>.active>a:hover, 
-.navbar-inverse .navbar-nav>.active>a:focus {
-  background-color: #FFFFFF;
-  color: #FFA500;
-}
-.container h1{
-  text-align: center;
-  color: #FF8B05;
+  color: #ffffff;
   border: none;
-  font-family: "Rubik Mono One", monospace;
-  font-weight: 400;
-  font-style: normal;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.cube-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  perspective: 500px;
-}
-.cube {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  transform-style: preserve-3d;
-  transform: rotateX(90deg) rotateY(90deg);
-  animation: spinCube 10s infinite linear;
-}
-.face {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(0, 255, 255, 0.3);
-  border: 2px solid rgba(0, 255, 255, 0.6);
-}
-.front  { transform: translateZ(50px); }
-.back   { transform: rotateY(180deg) translateZ(50px); }
-.right  { transform: rotateY(90deg) translateZ(50px); }
-.left   { transform: rotateY(-90deg) translateZ(50px); }
-.top    { transform: rotateX(90deg) translateZ(50px); }
-.bottom { transform: rotateX(-90deg) translateZ(50px); }
 
-@keyframes spinCube {
-  from {
-    transform: rotateX(45deg) rotateY(45deg);
-  }
-  to {
-    transform: rotateX(405deg) rotateY(405deg);
-  }
+.contact-form .btn-submit:hover {
+  background-color: #FF8B05;
 }
-.intro1{
+/* Services Section Styling */
+.services-section {
+  background-color: #f4f4f4;
+  padding: 60px 40px;
   text-align: center;
-    font-family: "Gowun Batang", serif;
-    font-weight: 400;
-    font-style: normal;
 }
-.intro2 {
+
+.services-intro h2 {
+  font-size: 2.5em;
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #FFA500;
+}
+
+.services-intro p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.webdev {
-  text-align: center;
-  background-color: #E5E5E5;
-  width: 100%;
-  max-width: 270px;
-  border-radius: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.webdev img {
-  height: 100px;
-}
-
-.webdev p {
-  padding: 15px;
-}
-
-.webdev a {
-  background-color: #2783FF;
-  color: white;
+.service-box {
+  background-color: #fff;
+  border-radius: 10px;
   padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
+  width: 250px;
+  margin: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.card-client {
-  background: #2cb5a0;
-  width: 25rem;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 4px solid #7cdacc;
-  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease;
-}
-
-.card-client:hover {
+.service-box:hover {
   transform: translateY(-10px);
 }
 
-.user-picture {
-  overflow: hidden;
-  object-fit: cover;
-  width: 10rem;
-  height: 10rem;
-  border: 4px solid #7cdacc;
-  border-radius: 999px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.user-picture img {
-  width: 10rem;
-  fill: currentColor;
-}
-
-.name-client {
-  margin: 0;
-  margin-top: 20px;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.name-client span {
-  display: block;
-  font-weight: 200;
-  font-size: 16px;
-}
-
-.social-media:before {
-  content: " ";
-  display: block;
+.service-image img {
   width: 100%;
-  height: 2px;
-  margin: 20px 0;
-  background: #7cdacc;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
 }
 
-.social-media a {
-  position: relative;
-  margin-right: 15px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.social-media a:last-child {
-  margin-right: 0;
-}
-
-.social-media a svg {
-  width: 1.6rem;
-  fill: currentColor;
-}
-
-.tooltip-social {
-  background: #262626;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  padding: 0.5rem 0.4rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -90%);
-  transition: all 0.2s ease;
-  z-index: 1;
-}
-
-.tooltip-social:after {
-  content: " ";
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  border: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: transparent;
-  transform: translate(-50%, 100%);
-}
-
-.social-media a .tooltip-social:after {
-  border-top-color: #262626;
-}
-
-.social-media a:hover .tooltip-social {
-  opacity: 1;
-  transform: translate(-50%, -130%);
-}
-
-footer {
-  background-color: #2c2c2c;
-  color: #fff;
-  padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
-}
-
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-company,
-.footer-links,
-.footer-social {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 20px;
-}
-
-.footer-company h3,
-.footer-links h4,
-.footer-social h4 {
-  color: #FFA500;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-  color: #FFA500;
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 20px;
-  margin-right: 15px;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #FFA500;
-}
-
-.footer-bottom-text {
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid #444;
-}
-
-.footer-bottom-text p {
-  margin: 0;
-  color: #aaa;
-}
-
-.feedbackform {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
-}
-
-.feedbackform input[type="email"],
-.feedbackform textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  transition: border-color 0.3s ease;
-}
-
-.feedbackform input::placeholder,
-.feedbackform textarea::placeholder {
-  color: #aaa;
-}
-
-.feedbackform input[type="email"]:focus,
-.feedbackform textarea:focus {
-  border-color: #ffa500;
-  outline: none;
-}
-
-.feedbackform button[type="submit"] {
-  width: 100%;
-  padding: 15px;
-  background-color: #ffa500;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.feedbackform button[type="submit"]:hover {
-  background-color: #ff8c00;
-}
-
-#result {
-  margin-top: 20px;
-  font-size: 14px;
+.service-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
   color: #333;
 }
 
-.contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px 0;
-}
-
-.contact-info {
-  max-width: 45%;
-}
-
-.contact-form {
-  max-width: 45%;
-}
-
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+.service-box p {
+  font-size: 16px;
+  color: #555;
 }
 
 @media (max-width: 768px) {
-  .footer-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-company,
-  .footer-links,
-  .footer-social {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .feedbackform {
-    padding: 15px;
-  }
-  .feedbackform input[type="email"],
-  .feedbackform textarea {
-    padding: 12px;
-  }
-  .feedbackform button[type="submit"] {
-    padding: 12px;
-    font-size: 14px;
-  }
   .services-container {
     flex-direction: column;
     align-items: center;
   }
+}
+.contactsum{
+  background-color: #FFA500;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration-line: none;
 }
